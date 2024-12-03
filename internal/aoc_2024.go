@@ -4,8 +4,8 @@ import (
 	"embed"
 	"errors"
 
-	day_one "martinvankeulen.nl/aoc-2024/internal/day_one"
-	day_two "martinvankeulen.nl/aoc-2024/internal/day_two"
+	day_one "martinvankeulen.nl/aoc-2024/internal/day_1"
+	day_two "martinvankeulen.nl/aoc-2024/internal/day_2"
 	aoc_arguments "martinvankeulen.nl/aoc-2024/pkg/package_reader"
 )
 
@@ -28,7 +28,7 @@ func (a *AdventOfCode2024) Solve(input aoc_arguments.AocInputArguments) (*string
 var puzzleInputsFS embed.FS
 
 func dayOne(part uint8) (*string, error) {
-	p1i, err := puzzleInputsFS.ReadFile("assets/day_one_p1.txt")
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_1_p1.txt")
 
 	if err != nil {
 		panic(err)
@@ -45,7 +45,7 @@ func dayOne(part uint8) (*string, error) {
 }
 
 func dayTwo(part uint8) (*string, error) {
-	p1i, err := puzzleInputsFS.ReadFile("assets/day_two_p1.txt")
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_2_p1.txt")
 
 	if err != nil {
 		panic(err)
