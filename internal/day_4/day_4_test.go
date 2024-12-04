@@ -17,7 +17,9 @@ func TestPartOne(t *testing.T) {
 }
 
 func TestPartTwo(t *testing.T) {
-	_ = SolvePartTwo(part_1_input)
+	result := SolvePartTwo(part_1_input)
 
-	t.Errorf("day 4 part 2 is not implemented yet.")
+	if result != "9" {
+		t.Errorf("day 4 part 1 should solve with '18' given input, not '%s'", result)
+	}
 }
