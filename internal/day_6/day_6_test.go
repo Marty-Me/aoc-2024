@@ -16,6 +16,48 @@ func TestPartOne(t *testing.T) {
 	}
 }
 
+//go:embed test/example_right.txt
+var exampleRight string
+
+func TestRight(t *testing.T) {
+	result := SolvePartOne(exampleRight)
+
+	if result != "2" {
+		t.Errorf("Should solve for 2 not '%s'", result)
+	}
+}
+
+//go:embed test/example_left.txt
+var exampleLeft string
+
+func TestLeft(t *testing.T) {
+	result := SolvePartOne(exampleLeft)
+
+	if result != "3" {
+		t.Errorf("Should solve for 3 not '%s'", result)
+	}
+}
+
+//go:embed test/example_down.txt
+var exampleDown string
+
+func TestDown(t *testing.T) {
+	result := SolvePartOne(exampleDown)
+	if result != "3" {
+		t.Errorf("Should solve for 3 not '%s'", result)
+	}
+}
+
+//go:embed test/example_up.txt
+var exampleUp string
+
+func TestUp(t *testing.T) {
+	result := SolvePartOne(exampleUp)
+	if result != "5" {
+		t.Errorf("Should solve for 5 not '%s'", result)
+	}
+}
+
 func TestPartTwo(t *testing.T) {
 	result := SolvePartTwo(part1Input)
 
