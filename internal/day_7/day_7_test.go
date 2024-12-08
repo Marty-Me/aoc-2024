@@ -19,7 +19,7 @@ func TestPartOne(t *testing.T) {
 func TestPartTwo(t *testing.T) {
 	result := SolvePartTwo(part1Input)
 
-	if result != "?" {
-		t.Errorf("day 7 part 2 should solve with '?' given input, not '%s'", result)
+	if result != "11387" {
+		t.Errorf("day 7 part 2 should solve with '11387' given input, not '%s'", result)
 	}
 }
