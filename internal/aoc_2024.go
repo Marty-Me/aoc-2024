@@ -165,7 +165,7 @@ func daySeven(part uint8) (*string, error) {
 }
 
 func dayEight(part uint8) (*string, error) {
-	p1i, err := puzzleInputsFS.ReadFile("assets/day_7_p1.txt")
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_8_p1.txt")
 
 	if err != nil {
 		panic(err)
