@@ -6,11 +6,6 @@ import (
 	"strings"
 )
 
-type Page struct {
-	index int64
-	value int64
-}
-
 func SolvePartTwo(input string) string {
 	scanner := bufio.NewScanner(strings.NewReader(input))
 	pageOrderingRules, updates := parsePuzzleInput(scanner)
