@@ -11,8 +11,8 @@ var part1Input string
 func TestPartOne(t *testing.T) {
 	result := SolvePartOne(part1Input)
 
-	if result != "14" {
-		t.Errorf("day 9 part 1 should solve with '14' given input, not '%s'", result)
+	if result != "1928" {
+		t.Errorf("day 9 part 1 should solve with '1928' given input, not '%s'", result)
 	}
 }
 
