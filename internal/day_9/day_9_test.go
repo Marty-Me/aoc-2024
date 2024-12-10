@@ -19,7 +19,18 @@ func TestPartOne(t *testing.T) {
 func TestPartTwo(t *testing.T) {
 	result := SolvePartTwo(part1Input)
 
-	if result != "?" {
+	if result != "2858" {
+		t.Errorf("day 9 part 2 should solve with '?' given input, not '%s'", result)
+	}
+}
+
+//go:embed test/example_2.txt
+var part2Input string
+
+func TestPartTwoExample(t *testing.T) {
+	result := SolvePartTwo(part2Input)
+
+	if result != "132" {
 		t.Errorf("day 9 part 2 should solve with '?' given input, not '%s'", result)
 	}
 }
