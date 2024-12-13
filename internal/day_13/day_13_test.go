@@ -1,4 +1,4 @@
-package day12
+package day13
 
 import (
 	_ "embed"
@@ -11,8 +11,8 @@ var part1Input string
 func TestPartOne(t *testing.T) {
 	result := SolvePartOne(part1Input)
 
-	if result != "1930" {
-		t.Errorf("day 12 part 1 should solve with '1930' given input, not '%s'", result)
+	if result != "480" {
+		t.Errorf("day 13 part 1 should solve with '480' given input, not '%s'", result)
 	}
 }
 
@@ -20,6 +20,6 @@ func TestPartTwo(t *testing.T) {
 	result := SolvePartTwo(part1Input)
 
 	if result != "?" {
-		t.Errorf("day 12 part 2 should solve with '?' given input, not '%s'", result)
+		t.Errorf("day 13 part 2 should solve with '?' given input, not '%s'", result)
 	}
 }

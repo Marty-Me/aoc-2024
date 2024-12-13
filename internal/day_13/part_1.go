@@ -1,4 +1,4 @@
-package day12
+package day13
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func SolvePartTwo(input string) string {
+func SolvePartOne(input string) string {
 	_ = bufio.NewScanner(strings.NewReader(input))
 	return fmt.Sprint(0)
 }
