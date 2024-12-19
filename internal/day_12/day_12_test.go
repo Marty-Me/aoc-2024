@@ -19,7 +19,29 @@ func TestPartOne(t *testing.T) {
 func TestPartTwo(t *testing.T) {
 	result := SolvePartTwo(part1Input)
 
-	if result != "?" {
-		t.Errorf("day 12 part 2 should solve with '?' given input, not '%s'", result)
+	if result != "1206" {
+		t.Errorf("day 12 part 2 should solve with '1206' given input, not '%s'", result)
+	}
+}
+
+//go:embed test/example_custom_1.txt
+var custom1Input string
+
+func TestCustom1(t *testing.T) {
+	result := SolvePartOne(custom1Input)
+
+	if result != "80" {
+		t.Errorf("day 12 custom 1 should solve with '80' given input, not '%s'", result)
+	}
+}
+
+//go:embed test/example_custom_2.txt
+var custom2Input string
+
+func TestCustom2(t *testing.T) {
+	result := SolvePartOne(custom2Input)
+
+	if result != "120" {
+		t.Errorf("day 12 custom 1 should solve with '120' given input, not '%s'", result)
 	}
 }
