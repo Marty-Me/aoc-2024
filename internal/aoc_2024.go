@@ -10,6 +10,7 @@ import (
 	day_twelve "martinvankeulen.nl/aoc-2024/internal/day_12"
 	day_thirteen "martinvankeulen.nl/aoc-2024/internal/day_13"
 	day_fourteen "martinvankeulen.nl/aoc-2024/internal/day_14"
+	day_fifteen "martinvankeulen.nl/aoc-2024/internal/day_15"
 	day_two "martinvankeulen.nl/aoc-2024/internal/day_2"
 	day_three "martinvankeulen.nl/aoc-2024/internal/day_3"
 	day_four "martinvankeulen.nl/aoc-2024/internal/day_4"
@@ -314,9 +315,9 @@ func dayFifteen(part uint8) (*string, error) {
 	var result string
 
 	if part == 1 {
-		result = day_fourteen.SolvePartOne(string(p1i))
+		result = day_fifteen.SolvePartOne(string(p1i))
 	} else {
-		result = day_fourteen.SolvePartTwo(string(p1i))
+		result = day_fifteen.SolvePartTwo(string(p1i))
 	}
 	return &result, nil
 }
