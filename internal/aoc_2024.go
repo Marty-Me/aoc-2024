@@ -55,6 +55,8 @@ func (a *AdventOfCode2024) Solve(input aoc_arguments.AocInputArguments) (*string
 		return dayThirteen(input.Part)
 	case 14:
 		return dayFourteen(input.Part)
+	case 15:
+		return dayFifteen(input.Part)
 
 	default:
 		return nil, errors.New("selected <day> not implemented yet")
@@ -287,6 +289,23 @@ func dayThirteen(part uint8) (*string, error) {
 
 func dayFourteen(part uint8) (*string, error) {
 	p1i, err := puzzleInputsFS.ReadFile("assets/day_14.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_fourteen.SolvePartOne(string(p1i))
+	} else {
+		result = day_fourteen.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayFifteen(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_15.txt")
 
 	if err != nil {
 		panic(err)
