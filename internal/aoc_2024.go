@@ -14,7 +14,13 @@ import (
 	day_sixteen "martinvankeulen.nl/aoc-2024/internal/day_16"
 	day_seventeen "martinvankeulen.nl/aoc-2024/internal/day_17"
 	day_eighteen "martinvankeulen.nl/aoc-2024/internal/day_18"
+	day_nineteen "martinvankeulen.nl/aoc-2024/internal/day_19"
 	day_two "martinvankeulen.nl/aoc-2024/internal/day_2"
+	day_twenty "martinvankeulen.nl/aoc-2024/internal/day_20"
+	day_twentyone "martinvankeulen.nl/aoc-2024/internal/day_21"
+	day_twentytwo "martinvankeulen.nl/aoc-2024/internal/day_22"
+	day_twentythree "martinvankeulen.nl/aoc-2024/internal/day_23"
+	day_twentyfour "martinvankeulen.nl/aoc-2024/internal/day_24"
 	day_three "martinvankeulen.nl/aoc-2024/internal/day_3"
 	day_four "martinvankeulen.nl/aoc-2024/internal/day_4"
 	day_five "martinvankeulen.nl/aoc-2024/internal/day_5"
@@ -67,6 +73,18 @@ func (a *AdventOfCode2024) Solve(input aoc_arguments.AocInputArguments) (*string
 		return daySeventeen(input.Part)
 	case 18:
 		return dayEighteen(input.Part)
+	case 19:
+		return dayNineteen(input.Part)
+	case 20:
+		return dayTwenty(input.Part)
+	case 21:
+		return dayTwentyOne(input.Part)
+	case 22:
+		return dayTwentyTwo(input.Part)
+	case 23:
+		return dayTwentyThree(input.Part)
+	case 24:
+		return dayTwentyFour(input.Part)
 
 	default:
 		return nil, errors.New("selected <day> not implemented yet")
@@ -378,6 +396,108 @@ func dayEighteen(part uint8) (*string, error) {
 		result = day_eighteen.SolvePartOne(string(p1i))
 	} else {
 		result = day_eighteen.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayNineteen(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_19.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_nineteen.SolvePartOne(string(p1i))
+	} else {
+		result = day_nineteen.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayTwenty(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_20.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_twenty.SolvePartOne(string(p1i))
+	} else {
+		result = day_twenty.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayTwentyOne(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_21.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_twentyone.SolvePartOne(string(p1i))
+	} else {
+		result = day_twentyone.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayTwentyTwo(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_22.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_twentytwo.SolvePartOne(string(p1i))
+	} else {
+		result = day_twentytwo.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayTwentyThree(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_23.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_twentythree.SolvePartOne(string(p1i))
+	} else {
+		result = day_twentythree.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayTwentyFour(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_24.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_twentyfour.SolvePartOne(string(p1i))
+	} else {
+		result = day_twentyfour.SolvePartTwo(string(p1i))
 	}
 	return &result, nil
 }
