@@ -13,6 +13,7 @@ import (
 	day_fifteen "martinvankeulen.nl/aoc-2024/internal/day_15"
 	day_sixteen "martinvankeulen.nl/aoc-2024/internal/day_16"
 	day_seventeen "martinvankeulen.nl/aoc-2024/internal/day_17"
+	day_eighteen "martinvankeulen.nl/aoc-2024/internal/day_18"
 	day_two "martinvankeulen.nl/aoc-2024/internal/day_2"
 	day_three "martinvankeulen.nl/aoc-2024/internal/day_3"
 	day_four "martinvankeulen.nl/aoc-2024/internal/day_4"
@@ -64,6 +65,8 @@ func (a *AdventOfCode2024) Solve(input aoc_arguments.AocInputArguments) (*string
 		return daySixteen(input.Part)
 	case 17:
 		return daySeventeen(input.Part)
+	case 18:
+		return dayEighteen(input.Part)
 
 	default:
 		return nil, errors.New("selected <day> not implemented yet")
@@ -358,6 +361,23 @@ func daySeventeen(part uint8) (*string, error) {
 		result = day_seventeen.SolvePartOne(string(p1i))
 	} else {
 		result = day_seventeen.SolvePartTwo(string(p1i))
+	}
+	return &result, nil
+}
+
+func dayEighteen(part uint8) (*string, error) {
+	p1i, err := puzzleInputsFS.ReadFile("assets/day_18.txt")
+
+	if err != nil {
+		panic(err)
+	}
+
+	var result string
+
+	if part == 1 {
+		result = day_eighteen.SolvePartOne(string(p1i))
+	} else {
+		result = day_eighteen.SolvePartTwo(string(p1i))
 	}
 	return &result, nil
 }
